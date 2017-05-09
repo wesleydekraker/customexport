@@ -1,0 +1,12 @@
+<h1>
+    <?php
+        $count = $this->exportOrders();
+        if ($count == 0) {
+            echo "No one placed an order in the past 24 hours";
+        } else if ($count == 1) {
+            echo $count . " order was exported to a CSV file";
+        } else {
+            echo $count . " orders were exported to a CSV file";
+        }
+    ?>
+</h1>
